@@ -8,7 +8,7 @@ class Solution(object):
         :rtype: List[int]
         """
         def findrightpos(num,target,lo,hi):
-            while lo < hi:
+            while lo < hi: 
                 mid= (lo+hi) // 2
                 if target < num[mid]: #[lo,mid) (mid,hi)
                     hi = mid
@@ -22,3 +22,7 @@ class Solution(object):
         else:
             rightpos=findrightpos(nums,target,0,len(nums))
             return [leftpos,rightpos-1]
+
+if __name__=="__main__":
+    s=Solution()
+    print s.searchRange([1,2,3,4,4,4,6],4)
